@@ -1,0 +1,423 @@
+:root {
+    --color-primary:#35a22c;
+    --title-color:#1a1d2d;
+    --text-color:#585858;
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    overflow-x: hidden;
+}
+
+.title {
+    text-align: center;
+    max-width: 744px;
+    margin: 0 auto;
+}
+
+.title h2 {
+    font-size: 2.3rem;
+    margin-bottom: 24px;
+}
+
+.title p {
+    margin-bottom: 30px;
+}
+
+/*********** Header ************/
+header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+header .navbar-toggler {
+    background-color: var(--color-primary);
+}
+
+header .navbar-brand i{
+    color: var(--color-primary);
+    font-size: 3rem;
+}
+
+header .navbar-brand span{
+    font-size: 2.2rem;
+}
+
+header .nav-item {
+    margin: 0 10px;
+}
+
+header .nav-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: all 0.3s;
+}
+
+header .nav-item.active::after {
+    width: 100%;
+}
+
+header .nav-item a {
+    color: white !important;
+    transition: all 0.3s;
+}
+
+header .nav-item.active a{
+    color: var(--color-primary) !important;
+}
+
+header .nav-item:hover a{
+    color: var(--color-primary) !important;
+}
+
+header .nav-item:hover::after {
+    width: 100%;
+}
+
+header .navbar-toggler:focus {
+    outline: none;
+}
+
+/************** Carousel ************/
+.carousel {
+    position: relative;
+}
+.carousel .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(39,43,54,.5);
+}
+
+.carousel-item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url('../img/finland.jpg');
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url('../img/mountains.jpg');
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url('../img/mountains-1.jpg');
+}
+
+.carousel-item .img-thumb {
+    width: 140px;
+    margin: auto;
+    animation-delay: 0.3s;
+}
+
+.carousel-item h3 {
+    font-size: 3.5rem;
+    margin-top: 8px;
+    animation-delay: 1.2s;
+}
+
+.carousel-item p {
+    font-size: 1.5rem;
+    animation-delay: 2s;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-indicators li {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 0 8px;
+}
+
+.carousel-indicators .active {
+    background-color: var(--color-primary);
+}
+
+/* Project */
+#project {
+    padding: 100px 0;
+}
+.project__content .nav-pills .nav-link {
+    border: 1px solid #1a1d2d;
+    margin: 0 4px;
+    color: #1a1d2d;
+}
+
+.project__content .nav-pills .nav-link.active {
+    background-color: var(--color-primary);
+    border-color: transparent;
+    color: white;
+}
+
+
+.project__content .card {
+    overflow: hidden;
+    border-radius: 20px;
+    border:none;
+    box-shadow: 0 0 0.4rem rgb(0 0 0 / 13%);
+}
+
+.project__content .card-body {
+    border: 1px solid transparent;
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all 0.4s;
+}
+.project__content .card:hover .card-title,
+.project__content .card:hover .card-body {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.project__content .card-title {
+    font-size: 1.2rem;
+    color: var(--title-color);
+    transition: all 0.4s;
+}
+.project__content .card-text {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* service */
+#service {
+    background-image: url('../img/3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+}
+#service .title {
+    position: relative;
+}
+#service .overlay{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(7,10,12,.72);
+}
+
+.service__content {
+    margin-top: 60px;
+}
+
+.service__content .card {
+    background-color: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 10px;;
+    backdrop-filter: blur(3px);
+    padding: 1rem;
+    transition: all 0.5s;
+}
+
+.service__content .card:hover {
+    background-color: black;
+    border-color: white;
+}
+
+.service__content .card-title {
+    font-size: 1.2rem;
+    margin: 12px 0;
+}
+
+.service__content .card-text {
+    margin-bottom: 12px;
+    padding-top: 12px;
+}
+
+.service__content .card i {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-top: 20px;
+}
+
+/* edu */
+#edu {
+    padding: 70px 0;
+    position: relative;
+
+}
+
+.bg-edu {
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    background-image: url('../img/memphis_3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+#edu img {
+    width: 100%;
+}
+
+#edu .card {
+    padding: 1.6rem;
+    border: none;
+    background-color: rgba(255,255,255,.25);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+#edu .card .card-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+#edu p{
+    color: var(--text-color);
+}
+
+
+/* footer */
+footer {
+    background-color: #222222;
+    text-align: center;
+    padding: 45px 0;
+}
+
+.footer__social {
+    margin-bottom: 30px;
+}
+
+.footer__social a {
+    text-decoration: none;
+    color: unset;
+}
+
+.footer__social i {
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    border: 1px solid #aaaaaa;
+    margin: 0 4px;
+    color: #aaaaaa;
+    transition: all 0.3s;
+}
+
+.footer__social i:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.footer__copyright {
+    padding-top: 30px;
+    color: #aaaaaa;
+    border-top: 1px solid #aaaaaa;
+}
+
+.footer__copyright a {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.footer__copyright a:hover {
+    color: var(--color-primary);
+}
+
+@media screen and (max-width: 1200px) {
+    #edu .container {
+        max-width: unset;
+    }
+    header .container {
+        max-width: unset;
+    }
+}
+
+@media screen and (max-width: 988px) {
+    header .navbar-collapse {
+        background-color: white;
+    }
+
+    header .nav-item a {
+        color: var(--color-primary) !important;
+        transition: all 0.3s;
+    }
+
+    header .nav-item.active::after,
+    header .nav-item:hover::after {
+        width: 0;
+    }
+
+    header .nav-item:hover a{
+        color: white !important;
+    }
+    header .nav-item {
+        padding: 0 10px;
+        margin: 0;
+    }
+    header .nav-item:hover {
+        background-color: var(--color-primary);
+    }
+}
+@media screen and (max-height: 415px) {
+    .carousel-item .img-thumb {
+        width: 100px;
+    }
+
+    .carousel-item h3 {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+    
+    .carousel-item p {
+        font-size: 3vw;
+        line-height: 3vw;
+    }
+   
+}
+@media screen and (max-width: 400px) {
+    .carousel-item .img-thumb {
+        width: 50%;
+    }
+    .carousel-item h3 {
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+    
+    .carousel-item p {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+
+    header .navbar-brand i{
+        font-size: 2rem;
+    }
+    
+    header .navbar-brand span{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header .navbar-brand {
+        display: none;
+    }
+    /* .carousel-item .img-thumb {
+        width: 50%;
+    } */
+    header button.navbar-toggler {
+        margin-left: auto;
+    }
+}
